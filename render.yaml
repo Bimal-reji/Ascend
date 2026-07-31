@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ascend
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ASCEND_SECRET_KEY
+        generateValue: true
+      # Paste your Neon Postgres connection string here, e.g.
+      #   postgresql://user:pass@ep-xxxx.region.aws.neon.tech/ascend?sslmode=require
+      - key: DATABASE_URL
+        sync: false
+      # Optional: comma-separated list of allowed CORS origins.
+      # Same-origin requests need no CORS config, so this can stay empty.
+      - key: CORS_ORIGINS
+        sync: false

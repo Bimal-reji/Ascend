@@ -77,3 +77,20 @@ POST /nutrition/log            GET  /nutrition/today
 ```
 
 All routes except `/auth/*` and `/health` require `Authorization: Bearer <token>`.
+
+## Deploy to Render (free)
+
+The repo ships with a multi-stage `Dockerfile`, a `render.yaml` blueprint, and a backend
+that serves the **built frontend and API from a single origin** (no CORS setup needed).
+
+1. **Database** — create a free Postgres at [Neon](https://neon.tech) and copy the
+   connection string. (Plain `postgres://…` URLs are auto-normalized to psycopg.)
+2. **Push to GitHub** — commit the `Dockerfile`, `render.yaml`, and `.dockerignore`.
+3. **Deploy** — on [Render](https://render.com), choose *New → Blueprint*, paste your
+   GitHub repo URL, and pick `render.yaml`. Render builds the image and deploys.
+4. **Env vars** — set `DATABASE_URL` (your Neon string) and `ASCEND_SECRET_KEY` in the
+   Render dashboard. `CORS_ORIGINS` is optional for same-origin.
+
+> Free-tier notes: the service sleeps after ~15 min idle (cold start ~30–50s on the next
+> request), and Render's own free Postgres expires after 90 days — use Neon or upgrade
+> for always-on persistence.
