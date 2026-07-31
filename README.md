@@ -1,5 +1,5 @@
 # ASCEND — Solo Leveling Fitness System
-
+link: https://ascend-xu3r.onrender.com
 A full-stack gamified fitness and habit-leveling app. You are a "Player"
 who levels up their real body by completing workouts — treated in-app as
 **Quests** and **Dungeons**, exactly like the System in Solo Leveling.
@@ -15,7 +15,7 @@ who levels up their real body by completing workouts — treated in-app as
 
 ## Features
 
-- **RPG stat sheet** — STR / VIT / AGI / PER / INT / SEN, each driven by real
+- **RPG stat sheet** — STR / VIT / AGI / PER / INT / SEN, each driven by reallu
   training data, visualized as the signature holographic **hexagon chart**.
 - **Rank & level system** — XP curve `100 * level^1.5`, hidden ranks E → D →
   C → B → A → S, plus a **National Level** easter-egg tier. Rank-ups trigger a
