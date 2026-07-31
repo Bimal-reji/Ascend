@@ -4,6 +4,12 @@ import sys
 from pathlib import Path
 
 os.environ["DATABASE_URL"] = "sqlite:///./test_ascend.db"
+
+# Start from a clean DB so re-runs and CI never collide with stale rows.
+TEST_DB = Path(__file__).resolve().parent.parent / "test_ascend.db"
+if TEST_DB.exists():
+    TEST_DB.unlink()
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from fastapi.testclient import TestClient  # noqa: E402
