@@ -1,6 +1,6 @@
 # ASCEND — Frontend
 
-React + Vite + Tailwind + Framer Motion + Plotly.
+React + Vite + Tailwind + Framer Motion + Plotly
 
 ## Dev
 
