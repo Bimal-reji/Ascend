@@ -1,6 +1,6 @@
 # ASCEND — Solo Leveling Fitness System
 link: https://ascend-xu3r.onrender.com
-A full-stack gamified fitness and habit-leveling app. You are a "Player"
+A full-stack gamified fitness and habit-leveling app. You are a PLAYER
 who levels up their real body by completing workouts — treated in-app as
 **Quests** and **Dungeons**, exactly like the System in Solo Leveling.
 
