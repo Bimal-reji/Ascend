@@ -32,7 +32,7 @@ who levels up their real body by completing workouts — treated in-app as
 
 ## Run it
 
-### Backend (port 8000)
+### Backend (port 8000))
 
 ```bash
 cd backend
